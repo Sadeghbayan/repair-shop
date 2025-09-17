@@ -3,7 +3,6 @@ import { NextRequest } from "next/server";
 
 export default withAuth(
   async (req: NextRequest) => {
-    console.log("Middleware", req);
     const { pathname } = req.nextUrl;
     if (pathname.startsWith("/api/auth")) {
       return NextResponse.next();
